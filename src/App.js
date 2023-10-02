@@ -22,7 +22,7 @@ function App() {
   }, []);
 
   useEffect(() => {
-    if(carrinho.length>0){
+    if(carrinho){
       localStorage.setItem("carrinho", JSON.stringify(carrinho))
     }
   }, [carrinho])
