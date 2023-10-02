@@ -1,4 +1,18 @@
+import { useEffect, useState } from "react";
+
 export default function Carrinho(props) {
+    useEffect(()=>{
+        setQnt(props.carrinho.length)
+        formatar()
+    },[props.carrinho])
+
+    function formatar(){
+        if(qnt>0){
+            setItem("itens");
+        }
+    }
+    const [item,setItem] = useState("item")
+    const [qnt,setQnt] = useState(0);
     return (
         <div style={{
             display: 'flex',
@@ -11,7 +25,8 @@ export default function Carrinho(props) {
             margin: '0px',
             padding: '0px',
             borderRadius: '10px',
-        }}>
+        }}
+        onClick={()=>props.setVisualizarCarrinho(!props.visualizarCarrinho)}>
             <div style={{
                 textAlign: 'center',
                 margin: '4px',
@@ -49,7 +64,7 @@ export default function Carrinho(props) {
                 <p style={{
                     margin: '0px',
                     padding: '0px',
-                }}>{props.qtdCarrinho || 0} item</p>
+                }}>{qnt.toString()} {item}</p>
             </div>
             <div id='segurança' style={{
                 display: 'flex',
