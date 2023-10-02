@@ -17,15 +17,14 @@ function App() {
       .then((produtos) => {
         setProdutos(produtos);
       });
-    setCarrinho(
-      JSON.parse(
-        localStorage.getItem("carrinho")
-      )
-    );
+    const carrinhoSalvo = JSON.parse(localStorage.getItem("carrinho"));
+    setCarrinho(carrinhoSalvo)
   }, []);
 
   useEffect(() => {
-    localStorage.setItem("carrinho", JSON.stringify(carrinho))
+    if(carrinho.length>0){
+      localStorage.setItem("carrinho", JSON.stringify(carrinho))
+    }
   }, [carrinho])
 
   return (
