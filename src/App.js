@@ -28,12 +28,6 @@ function App() {
     localStorage.setItem("carrinho", JSON.stringify(carrinho))
   }, [carrinho])
 
-  useEffect(()=>{
-    console.log(quantidades)
-  },[quantidades])
-
-
-
   return (
     < div className="App" >
       <Cabecalho />

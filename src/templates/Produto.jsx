@@ -11,7 +11,17 @@ export default function Produto(props) {
             qnt: quantidade
         }
         ])
-        console.log(props.carrinho)
+    }
+    
+    function handleQnt(qnt){
+        const carrinho = props.carrinho;
+        setQntCarrinho(qnt)
+        carrinho.forEach((produto)=>{
+            if(produto.prod.id == props.produto.id){
+                produto.qnt = qnt;
+            }
+        })
+        props.setCarrinho(carrinho)
     }
 
     function excluirDoCarrinho() {
@@ -78,7 +88,9 @@ export default function Produto(props) {
                         }}
                         type="number"
                         value={qntCarrinho}
-                        onChange={(e) => setQntCarrinho(Number(e.target.value))}
+                        onChange={(e) => {
+                            handleQnt(Number(e.target.value))
+                        }}
                         step={1}
                         min={1} />
                 }
