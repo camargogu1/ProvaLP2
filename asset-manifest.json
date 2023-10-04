@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/ProvaLP2/static/css/main.eefc237f.css",
-    "main.js": "/ProvaLP2/static/js/main.dc2d3574.js",
+    "main.js": "/ProvaLP2/static/js/main.9f13f63f.js",
     "static/media/ricardoeletro.png": "/ProvaLP2/static/media/ricardoeletro.b6832e7dca74d29262a5.png",
     "index.html": "/ProvaLP2/index.html",
     "main.eefc237f.css.map": "/ProvaLP2/static/css/main.eefc237f.css.map",
-    "main.dc2d3574.js.map": "/ProvaLP2/static/js/main.dc2d3574.js.map"
+    "main.9f13f63f.js.map": "/ProvaLP2/static/js/main.9f13f63f.js.map"
   },
   "entrypoints": [
     "static/css/main.eefc237f.css",
-    "static/js/main.dc2d3574.js"
+    "static/js/main.9f13f63f.js"
   ]
 }
